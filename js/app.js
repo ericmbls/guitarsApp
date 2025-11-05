@@ -1,12 +1,9 @@
 import { db } from './guitarras.js'
 
-
 const divContainer = document.querySelector('main div')
 const carritoContainer = document.querySelector('#carrito')
 const buttonVai = document.querySelector('#button-vai')
-
 let carrito = []
-
 const createDiv = (guitar) => {
     const div = document.createElement('div')
     div.className = 'col-md-6 col-lg-4 my-4 row align-items-center'
@@ -24,7 +21,6 @@ const createDiv = (guitar) => {
                     >Agregar al Carrito</button>
                 </div>`
     div.innerHTML = html
-
     return div
 }
 const createCart = (carrito) => {
