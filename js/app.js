@@ -27,8 +27,6 @@ const createDiv = (guitar) => {
 
     return div
 }
-
-
 const createCart = (carrito) => {
     const p = '<p class="text-center">El carrito esta vacio</p>'
     let total = 0
@@ -84,13 +82,9 @@ const createCart = (carrito) => {
         carritoContainer.innerHTML = html
     }
 }
-
-
-
 db.forEach(guitar =>{
     divContainer.appendChild(createDiv(guitar))
 })
-
 const carritcoClicked = (e) => {
     if(e.target.classList.contains('btn')){
         const btn = e.target.innerText
@@ -115,7 +109,6 @@ const carritcoClicked = (e) => {
         createCart(carrito)
     }
 }
-
 const cardClicked = (e) => {
     if(e.target.classList.contains('btn')){
         //console.log('Le diste al botón', e.target.getAttribute('data-id'))
@@ -137,7 +130,6 @@ const cardClicked = (e) => {
 }
 
 createCart(carrito)
-
 divContainer.addEventListener('click', cardClicked)
 carritoContainer.addEventListener('click', carritcoClicked)
 buttonVai.addEventListener('click', cardClicked)
